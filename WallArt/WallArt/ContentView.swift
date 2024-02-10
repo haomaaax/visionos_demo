@@ -35,6 +35,14 @@ struct ContentView: View {
             .gesture(TapGesture().targetedToAnyEntity().onEnded { _ in
                 enlarge.toggle()
             })
+            
+            VStack(alignment: .leading, content: {
+                Text("Welcome to Max's Art Gallery")
+                    .font(.extraLargeTitle2)
+            })
+            .padding(50)
+            .glassBackgroundEffect()
+            
 
             VStack (spacing: 12) {
                 Toggle("Enlarge RealityView Content", isOn: $enlarge)

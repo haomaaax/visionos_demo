@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct WallArtApp: App {
+    
+    @State private var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(viewModel)
         }.windowStyle(.volumetric)
 
         ImmersiveSpace(id: "ImmersiveSpace") {
